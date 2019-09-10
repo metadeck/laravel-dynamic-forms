@@ -1,0 +1,54 @@
+{
+    "name": "metadeck/forms",
+    "description": "Dynamic Form Builder",
+    "keywords": [
+        "metadeck",
+        "forms"
+    ],
+    "homepage": "https://github.com/metadeck/forms",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Declan McDonough",
+            "email": "declan@metadeck.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Metadeck\\Forms\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Metadeck\\Forms\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Metadeck\\Forms\\FormsServiceProvider"
+            ],
+            "aliases": {
+                "Forms": "Metadeck\\Forms\\FormsFacade"
+            }
+        }
+    }
+}
